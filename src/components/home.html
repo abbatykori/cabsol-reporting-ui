@@ -1,0 +1,190 @@
+<div id="application-wrapper">
+    <nav>
+        <div class="logo-wrapper">
+            <img src="../assets/logo-w.png" class="logo" alt="cabsol logo">
+        </div>
+
+        <ul class="menu">
+            <li>
+                <b-collapse class="card">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Projects
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.open ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+
+                            <b-field>
+                                <b-dropdown hoverable>
+                                    <button class="button" slot="trigger">
+                                        <span>Select below</span>
+                                        <b-icon icon="menu-down"></b-icon>
+                                    </button>
+
+                                    <b-dropdown-item>January 2018</b-dropdown-item>
+                                    <b-dropdown-item>February 2018</b-dropdown-item>
+                                    <b-dropdown-item>March 2018</b-dropdown-item>
+                                    <b-datepicker placeholder="Click to select..." icon="calendar-today">
+                                    </b-datepicker>
+                                </b-dropdown>
+                            </b-field>
+                        </div>
+                    </div>
+                </b-collapse>
+                <b-collapse class="card">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Expenditure
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.close ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a>Project MDG</a>.
+                            <a>Project XDA</a>.
+                        </div>
+                    </div>
+                </b-collapse>
+                <b-collapse class="card">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Revenue
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.close ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a>Project MDG</a>.
+                            <a>Project XDA</a>.
+                        </div>
+                    </div>
+                </b-collapse>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- <p class="date-time has-text-right">17th March, 2018 - 18:02pm</p> -->
+
+        <header class="page-header">
+            <h1 class="page-title">Project Title</h1>
+            <!--  <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="#">Bulma</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">Components</a>
+                    </li>
+                    <li class="is-active">
+                        <a href="#" aria-current="page">Breadcrumb</a>
+                    </li>
+                </ul>
+            </nav> -->
+        </header>
+
+        <b-tabs type="is-boxed">
+            <b-tab-item label="Tab 1"></b-tab-item>
+            <b-tab-item label="Tab 2"></b-tab-item>
+            <b-tab-item label="Tab 3"></b-tab-item>
+
+            <section class="charts-and-graphs">
+                <div class="page-filter-section">
+                    <b-field grouped>
+                        <b-field label="Showing results for">
+                            <b-field>
+                                <b-dropdown hoverable>
+                                    <button class="button" slot="trigger">
+                                        <span>Select below</span>
+                                        <b-icon icon="menu-down"></b-icon>
+                                    </button>
+
+                                    <b-dropdown-item>January 2018</b-dropdown-item>
+                                    <b-dropdown-item>February 2018</b-dropdown-item>
+                                    <b-dropdown-item>March 2018</b-dropdown-item>
+                                    <b-datepicker placeholder="Click to select..." icon="calendar-today">
+                                    </b-datepicker>
+                                </b-dropdown>
+                            </b-field>
+                        </b-field>
+                        <b-field label="Filter by">
+                            <b-input placeholder="Select filter"></b-input>
+                        </b-field>
+                        <b-field label="Search" expanded>
+                            <b-input placeholder="What are you looking for?..." type="search" icon="magnify" expanded>
+                            </b-input>
+                        </b-field>
+                    </b-field>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="grid-box">
+                        <h3 class="grid-box__title">Financial Overview</h3>
+                        <bar-charts :data="financialOverview" :options="{responsive: true, maintainAspectRatio: false}" :height="150" :width="1200"></bar-charts>
+                    </div>
+                    <div class="grid-box">
+                        <h3 class="grid-box__title">Cash on Hand</h3>
+                        <line-charts :data="cashOnHand" :options="{responsive: true, maintainAspectRatio: false}" :height="250" :width="500"></line-charts>
+                    </div>
+                    <div class="grid-box month-summary">
+                        <h3 class="grid-box__title">Cash on Hand</h3>
+
+                        <p class="month-summary__title">Dec 2016</p>
+                        <p class="month-summary__figure">930,643.00</p>
+                        <p class="month-summary__summary">
+                            <b-icon icon="menu-up" type="is-success">
+                            </b-icon>12% from last month
+                        </p>
+                        <p class="month-summary__summary">
+                            <b-icon icon="menu-down" type="is-danger">
+                            </b-icon>2% from last month
+                        </p>
+                        <p class="month-summary__summary">
+                            <b-icon>
+                            </b-icon>0% change
+                        </p>
+                    </div>
+                    <div class="grid-box">
+                        <h3 class="grid-box__title">Months of Runway</h3>
+                        <horizontal-bar-charts :data="monthsOfRunway" :options="{responsive: true, maintainAspectRatio: false, type: horizontalBar}" :height="250" :width="500"></horizontal-bar-charts>
+                    </div>
+                    <div class="grid-box month-summary">
+                        <h3 class="grid-box__title">Months of Runway</h3>
+
+                        <p class="month-summary__title">Dec 2016</p>
+                        <p class="month-summary__figure">6.43</p>
+                        <p class="month-summary__summary">
+                            <b-icon icon="menu-up" type="is-success">
+                            </b-icon>12% from last month
+                        </p>
+                        <p class="month-summary__summary">
+                            <b-icon icon="menu-down" type="is-danger">
+                            </b-icon>2% from last month
+                        </p>
+                        <p class="month-summary__summary">
+                            <b-icon>
+                            </b-icon>0% change
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </b-tabs>
+        <footer>
+            <p>2018. CABSOL. All rights reserved.</p>
+        </footer>
+    </main>
+</div>

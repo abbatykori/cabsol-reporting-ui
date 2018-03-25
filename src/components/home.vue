@@ -152,11 +152,13 @@ a {
 
 .logo {
   max-width: 100%;
-  padding: 10px 0 50px;
+  padding: 0 0 20px;
 }
 .menu a:not(.dropdown-item),
-.menu p {
+.menu p {    
   color: #fff;
+  font-size: 13px;
+  font-weight: bold;
 }
 .menu li {
   display: block;
@@ -167,11 +169,17 @@ a {
   box-shadow: none;
   background: transparent;
 }
+.menu .card-header-title{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
 .menu .collapse {
-  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .menu .card-content {
-  padding: 0 1.5rem;
+  padding: 5px 1.5rem;
 }
 #application-wrapper main {
   padding: 10px 25px;

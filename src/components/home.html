@@ -6,7 +6,7 @@
 
         <ul class="menu">
             <li>
-                <b-collapse class="card">
+                <b-collapse class="card" :open="false">
                     <div slot="trigger" slot-scope="props" class="card-header">
                         <p class="card-header-title">
                             Projects
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </b-collapse>
-                <b-collapse class="card">
+                <b-collapse class="card" :open="false">
                     <div slot="trigger" slot-scope="props" class="card-header">
                         <p class="card-header-title">
                             Expenditure
@@ -48,12 +48,11 @@
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            <a>Project MDG</a>.
-                            <a>Project XDA</a>.
+                            <a>Item</a>.
                         </div>
                     </div>
                 </b-collapse>
-                <b-collapse class="card">
+                <b-collapse class="card" :open="false">
                     <div slot="trigger" slot-scope="props" class="card-header">
                         <p class="card-header-title">
                             Revenue
@@ -65,8 +64,55 @@
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            <a>Project MDG</a>.
-                            <a>Project XDA</a>.
+                            <a>Item</a>.
+                        </div>
+                    </div>
+                </b-collapse>
+                <b-collapse class="card" :open="false">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Payable
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.close ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a>Item</a>.
+                        </div>
+                    </div>
+                </b-collapse>
+                <b-collapse class="card" :open="false">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Receivable
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.close ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a>Item</a>.
+                        </div>
+                    </div>
+                </b-collapse>
+                <b-collapse class="card" :open="false">
+                    <div slot="trigger" slot-scope="props" class="card-header">
+                        <p class="card-header-title">
+                            Asset
+                        </p>
+                        <a class="card-header-icon">
+                            <b-icon :icon="props.close ? 'menu-down' : 'menu-up'">
+                            </b-icon>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a>Item</a>.
                         </div>
                     </div>
                 </b-collapse>
@@ -99,9 +145,9 @@
         </header>
 
         <b-tabs type="is-boxed">
-            <b-tab-item label="Tab 1"></b-tab-item>
-            <b-tab-item label="Tab 2"></b-tab-item>
-            <b-tab-item label="Tab 3"></b-tab-item>
+            <b-tab-item label="Overview" icon="chart-pie"></b-tab-item>
+            <b-tab-item label="Comparative" icon="window-restore"></b-tab-item>
+            <b-tab-item label="Tables" icon="table"></b-tab-item>
 
             <section class="charts-and-graphs">
                 <div class="page-filter-section">

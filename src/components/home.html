@@ -106,7 +106,7 @@
             <section class="charts-and-graphs">
                 <div class="page-filter-section">
                     <b-field grouped>
-                        <b-field label="Showing results for">
+                        <b-field label="Showing results by">
                             <b-field>
                                 <b-dropdown hoverable>
                                     <button class="button" slot="trigger">
@@ -114,16 +114,28 @@
                                         <b-icon icon="menu-down"></b-icon>
                                     </button>
 
-                                    <b-dropdown-item>January 2018</b-dropdown-item>
-                                    <b-dropdown-item>February 2018</b-dropdown-item>
-                                    <b-dropdown-item>March 2018</b-dropdown-item>
-                                    <b-datepicker placeholder="Click to select..." icon="calendar-today">
-                                    </b-datepicker>
+                                    <b-dropdown-item >Yearly</b-dropdown-item>
+                                    <b-dropdown-item>Quarterly</b-dropdown-item>
+                                    <b-dropdown-item>Monthly</b-dropdown-item>
+                                    <b-dropdown-item>Weekly</b-dropdown-item>
+                                    <b-dropdown-item>Daily</b-dropdown-item>
                                 </b-dropdown>
                             </b-field>
                         </b-field>
                         <b-field label="Filter by">
-                            <b-input placeholder="Select filter"></b-input>
+                            
+                            <b-field>
+                                <b-dropdown hoverable>
+                                    <button class="button" slot="trigger">
+                                        <span>Select below</span>
+                                        <b-icon icon="menu-down"></b-icon>
+                                    </button>
+
+                                    <b-dropdown-item>March 2018</b-dropdown-item>
+                                    <b-dropdown-item>February 2018</b-dropdown-item>
+                                    <b-dropdown-item>January 2018</b-dropdown-item>
+                                </b-dropdown>
+                            </b-field>
                         </b-field>
                         <b-field label="Search" expanded>
                             <b-input placeholder="What are you looking for?..." type="search" icon="magnify" expanded>
